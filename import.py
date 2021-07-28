@@ -18,7 +18,7 @@ class ImportDB:
         return False if database is None else True
 
     def create_db(self, database_name):
-        query = f"CREATE DATABASE {database_name} CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';"
+        query = f"CREATE DATABASE {database_name} CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_general_ci';"
         self.connection.execute(query)
         return database_name
 
